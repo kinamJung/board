@@ -1,0 +1,227 @@
+@CHARSET "UTF-8";
+
+
+ #board { margin:20px auto;  }
+
+
+#search_form {
+	width:100%;
+	margin:50px auto 20px auto; 
+	text-align:center; 	 
+}
+
+.board-form {
+	margin-top:30px
+}
+
+.tbl-ex		{
+	width:100%;
+	margin:10px auto; 
+	border-collapse:collapse;
+	border-bottom:2px solid #333;
+}
+
+.tbl-ex th, 
+.tbl-ex td	{ 
+	padding:8px;
+	text-align:center; 	 
+}
+	
+.tbl-ex th	{ 
+	padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+}
+
+.tbl-ex td {
+	border-top:1px dotted #333;
+	border-bottom:1px dotted #333; 
+}
+
+.tbl-ex td.title {
+	text-align: left;	
+}
+
+.board-form .tbl-ex td {
+	text-align:left
+}
+
+.board-form .tbl-ex td.label {
+	text-align:right;
+	font-weight:bold;
+	width:60px; 
+}
+
+.board-form .tbl-ex input[ name='title' ] {
+	width: 480px;
+}
+
+.board-form .tbl-ex textarea {
+	width: 470px;
+	height: 200px;
+	padding: 10px;
+	resize: none;
+	outline: none;	
+}
+
+.board-form select {
+	padding:5px;
+}
+
+tr.even td	{ background-color:#e8ecf6 }
+.tbl-ex a	{ color:#666; text-decoration:none; font-weight:bold; }
+
+div.bottom {
+	width:100%;
+	height:50px;
+	margin:20px auto;
+}
+
+div.bottom a { 
+	text-decoration:none; 
+	dispaly:block;
+}
+
+a#new-book	 { 
+	float:right; 
+	padding:10px 20px 10px 20px ; 
+	border:1px solid #555; 
+	font-weight:bold; 
+	background-color:#E8ECF6; 
+	color:#111 
+}
+
+.board-form .bottom a,
+.board-form .bottom input[type="submit"] {
+	float:left; 
+	padding:10px 20px 10px 20px; 
+	border:1px solid #555; 
+	font-weight:bold; 
+	background-color:#E8ECF6; 
+	color:#111;
+	cursor: pointer	
+}
+.board-form .bottom input[type="submit"], input[type="text"]  {
+	float:left; 
+	padding:10px 20px 10px 20px; 
+	border:1px solid #555; 
+	font-weight:bold; 
+	background-color:#E8ECF6; 
+	color:#111;
+	cursor: pointer	
+}
+
+.board-form .bottom a {
+	margin-left: 10px;
+	padding:10px 20px 11px 20px 
+}
+
+a.del	{
+	display:block;
+	width:20px;
+	height:20px; 
+	background:url("/board/assets/images/recycle.png") no-repeat 0 0;
+	font-size:0;
+}
+/*btn*/
+		.btn {
+display: inline-block;
+padding: 9px 12px;
+padding-top: 7px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 20px;
+color: #5e5e5e;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-color: #d1dade;
+-webkit-border-radius: 3px;
+-webkit-border-radius: 3px;
+-webkit-border-radius: 3px;
+background-image: none !important;
+border: none;
+text-shadow: none;
+box-shadow: none;
+transition: all 0.12s linear 0s !important;
+font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.btn-left{	
+	float: right;
+}
+.btn-cons {
+margin-right: 5px;
+min-width: 120px;
+margin-bottom: 8px;
+}
+.btn-default {
+color: #333;
+background-color: #fff;
+border-color: #ccc;
+}
+.btn-primary {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+}
+.btn-success {
+color: #fff;
+background-color: #5cb85c;
+border-color: #4cae4c;
+}
+.btn-info {
+color: #fff;
+background-color: #5bc0de;
+border-color: #46b8da;
+}
+.btn-warning {
+color: #fff;
+background-color: #f0ad4e;
+border-color: #eea236;
+}
+.btn-danger {
+color: #fff;
+background-color: #d9534f;
+border-color: #d43f3a;
+}
+.btn-white {
+color: #5e5e5e;
+background-color: #fff;
+border: 1px solid #e5e9ec;
+}
+.btn-link, .btn-link:active, .btn-link[disabled], fieldset[disabled] .btn-link {
+background-color: transparent;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+border-color: transparent;
+}
+.btn-link {
+color: #5e5e5e;
+background-color: transparent;
+border: none;
+}
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+border-color: transparent;
+}
+.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+}
+
+
+/*
+	pager
+*/
+#board .pager				{ width:100%; text-align:center; padding:10px 0 0 0 }
+#board .pager ul			{ margin:0 auto }
+#board .pager ul li			{ color:#ff1e1e; display:inline; margin-left:15px; font-weight:bold; font-family: '돋움',dotum,Helvetica,sans-serif; }
+#board .pager ul li.disable	{ color:#c8c8c8 }
+#board .pager a:link,
+#board .pager a:visited,
+#board .pager a:active,
+#board .pager a:hover { color:#333; text-decoration:none }

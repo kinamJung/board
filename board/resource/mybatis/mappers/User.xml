@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+
+	<select id="get" resultType="UserVo" parameterType="UserVo">
+		<![CDATA[
+			select user_id as userID, user_role as userRole, no from TB_USER t where user_id = #{userID} and password = #{password}
+		]]>	
+	</select>
+
+	<select id="getById" resultType="UserVo" parameterType="String">
+		<![CDATA[
+			select user_id as userID, user_role as userRole, no from TB_USER t where user_id = #{id}
+		]]>	
+	</select>
+	<insert id="insert" parameterType="UserVo">
+		<![CDATA[
+			insert 
+			into tb_user 
+			values ( #{userID}, #{password}, sysdate, #{userRole}, #{name}, member_no_seq.nextval )
+		]]>
+	</insert>
+
+
+
+
+</mapper>

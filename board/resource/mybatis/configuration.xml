@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="UserVo" type="com.hanains.board.vo.UserVo" />
+		<typeAlias alias="FreeboardVo" type="com.hanains.board.vo.FreeboardVo" />
+		<typeAlias alias="BoardVo" type="com.hanains.board.vo.BoardVo" />
+		<typeAlias alias="BoardInfo" type="com.hanains.board.vo.BoardInfo"/>
+		<typeAlias alias="UploadFileVo" type="com.hanains.board.vo.UploadFileVo"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mybatis/mappers/User.xml" />
+		<mapper resource="mybatis/mappers/freeboard.xml" />
+		<mapper resource="mybatis/mappers/board.xml" />
+	</mappers>
+
+</configuration>
