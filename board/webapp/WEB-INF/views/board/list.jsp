@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>회원 게시판</title>
+<title>오 나의 게시판</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
  <link
 	href="${pageContext.request.contextPath}/assets/css/member_board.css"
@@ -50,7 +50,7 @@
 								<td class="title" style="padding-left:${( vo.depth - 1 )*10 }px">
 									<c:if test="${vo.depth > 1 }">
 										<img
-											src="${pageContext.request.contextPath }/assets/images/ico-reply.gif">
+											src="${pageContext.request.contextPath }/assets/images/ico.jpg">
 									</c:if> <a
 									href="${pageContext.request.contextPath}/board/view?no=${vo.no}&search=${search}&index=${index}&division=${division}">${vo.title}</a>
 								</td>
@@ -81,17 +81,6 @@
 		                </div>
 		            </form>
 		        </div>
-		        
-					<%-- <form class="bottom"
-						action="${pageContext.request.contextPath}/board/viewpaging"
-						method="get">
-						<input type="hidden" name="index" value="1"> 
-						<input type="hidden" name="size" value="${size }"> 
-						<input type="hidden" name="division" value="${division}"> 
-						
-						<input type="submit" value="찾기">
-						<input type="text" id="kwd" name="search" value="${search}"> 
-					</form> --%>
 					<div class="pager">
 						<ul>
 							<c:if test="${startpage > 1 }">
@@ -149,6 +138,7 @@
 
 				</div>
 			</div>
+		</div>
 		</div>
 </div>
 

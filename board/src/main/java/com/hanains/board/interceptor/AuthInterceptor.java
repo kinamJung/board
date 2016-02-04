@@ -31,9 +31,6 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 			return true;
 		}
 		
-		if( request.getParameter("division").equals("3") ){
-			return true;
-		}
 		
 		HttpSession session =  request.getSession();
 		

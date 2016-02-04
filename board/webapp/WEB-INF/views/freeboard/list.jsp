@@ -20,7 +20,7 @@
 <script
 	src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
-<title>자유 게시판</title>
+<title>오 나의 게시판</title>
 </head>
 <script type="text/javascript">
 $(function() {
@@ -79,8 +79,19 @@ $(function() {
 						<p>${fn:replace(vo.message,crlf,'<br/>')}</p>
 						
 						<div class="badge badge-success pull-right">${vo.regDate }</div>
-						<span class="label pull-right"><a
+						
+						<c:choose>
+							<c:when test="${empty authUser || authUser.userRole == 2 }">
+								<span class="label pull-right"><a
 									href="${pageContext.request.contextPath}/freeboard/deleteform/${vo.no}">삭제</a></span>
+							</c:when>
+							<c:when test="${ authUser.userRole == 1 }">
+								<span class="label pull-right"><a
+									href="${pageContext.request.contextPath}/freeboard/delete?no=${vo.no}">삭제</a></span>
+							</c:when>
+						</c:choose>
+						
+						
 						</div>
 					</c:forEach>
 				</div>

@@ -6,7 +6,7 @@
 	<delete id="deleteGuestBook" parameterType="FreeboardVo">	
 	<![CDATA[
 		delete from GUESTBOOK  
-		where no = #{no} and password= #{password}
+		where no = #{no}
 	]]>
 	</delete>
 
@@ -15,7 +15,7 @@
 	insert into GUESTBOOK 
 		values( GUESTBOOK_SEQ.nextval, #{name} ,#{password} ,#{message}, SYSDATE )
 	]]>
-		</insert>
+	</insert>
 
 	<select id="getList" resultType="FreeboardVo">
 	<![CDATA[
@@ -25,6 +25,12 @@
 	]]>
 	</select>
 
-
+	<select id="get" parameterType="Long" resultType="Long">
+		<![CDATA[
+			select no from GUESTBOOK where no = #{no} and password= #{password}
+	
+		]]>
+	
+	</select>
 
 </mapper>

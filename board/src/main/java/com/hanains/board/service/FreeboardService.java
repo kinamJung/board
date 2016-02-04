@@ -25,9 +25,14 @@ public class FreeboardService {
 		dao.delete(vo);		
 	}
 	
+	
+	
 	public void add(FreeboardVo vo){
 		dao.insert(vo);
 	}
 	
+	public Long getFreeboardNo(FreeboardVo vo){
+		return dao.select(vo);
+	}
 	
 }

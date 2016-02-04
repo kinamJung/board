@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.hanains.board.annotation.Auth;
+import com.hanains.board.annotation.AuthUser;
 import com.hanains.board.service.FreeboardService;
 import com.hanains.board.vo.FreeboardVo;
+import com.hanains.board.vo.UserVo;
 
 @Controller
 @RequestMapping("/freeboard")
@@ -37,13 +40,35 @@ public class FreeBoardController {
 		return "/freeboard/deleteform";
 	}
 
-	@RequestMapping(value="/delete", method=RequestMethod.POST)
-	public String delete(@ModelAttribute FreeboardVo vo)
+	
+	@RequestMapping(value="/delete")
+	public String delete(@ModelAttribute FreeboardVo vo, @AuthUser UserVo user)
 	{
-		freeboardService.delete(vo);
+		
+		if(user != null){
+			if( user.getUserRole() == 1){
+				freeboardService.delete(vo);
+			}else
+			{
+				Long freeboardNo = freeboardService.getFreeboardNo(vo);
+				if(freeboardNo != null){
+					freeboardService.delete(vo);
+				}
+			}
+		}else{
+			if(vo.getNo() == null || vo.getPassword() == null){
+				return "redirect:/freeboard/";
+			}
+			Long freeboardNo = freeboardService.getFreeboardNo(vo);
+			if(freeboardNo != null){
+				freeboardService.delete(vo);
+			}
+		}
 		
 		return "redirect:/freeboard/";
 	}
+	
+	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public String add(@ModelAttribute FreeboardVo vo){
 		

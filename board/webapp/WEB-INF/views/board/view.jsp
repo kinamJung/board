@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MySite</title>
+<title>오 나의 게시판</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link
 	href="${pageContext.request.contextPath}/assets/css/member_board.css"

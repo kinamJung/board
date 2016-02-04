@@ -7,7 +7,7 @@
 <!doctype html>
 <html>
 <head>
-<title>mysite</title>
+<title>오 나의 게시판</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="${pageContext.request.contextPath}/assets/css/user.css"
 	rel="stylesheet" type="text/css">
@@ -69,7 +69,7 @@
 				url : "${pageContext.request.contextPath}/api/user/checkID",
 				type : "get",
 				dataType : "json",
-				data : "userID=" + userID,
+				data :  encodeURI( "userID=" + userID),
 				//contentType: "application/json"
 				success : function(response) {
 					console.log(response);
@@ -80,8 +80,8 @@
 					if (response.data == false) {
 						alert("이미 사용중인 이메일입니다.");
 						var $userID = $("#userID");
-						$email.val("");
-						$email.focus();
+						$userID.val("");
+						$userID.focus();
 						return;
 					}
 					$("#btn-checkemail").hide();

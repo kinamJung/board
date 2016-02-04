@@ -9,7 +9,7 @@
 
 <html>
 <head>
-<title>MySite</title>
+<title>오 나의 게시판</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>

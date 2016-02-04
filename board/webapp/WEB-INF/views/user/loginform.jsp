@@ -6,7 +6,7 @@
 <!doctype html>
 <html>
 <head>
-<title>board login</title>
+<title>로그인</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 <script type="text/javascript"

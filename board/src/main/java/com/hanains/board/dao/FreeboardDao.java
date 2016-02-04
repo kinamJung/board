@@ -30,5 +30,8 @@ public class FreeboardDao {
 		sqlSession.selectOne("freeboard.insertGuestBook", vo);	
 	}
 	
+	public Long select(FreeboardVo vo){
+		return sqlSession.selectOne("freeboard.get", vo);
+	}
 	
 }

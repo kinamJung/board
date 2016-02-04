@@ -44,6 +44,7 @@ public class UserController {
 	@RequestMapping("/checkID")
 	public Object checkEmail(@RequestParam(value="userID", required=true, defaultValue="") String userID){
 		
+		System.out.println(userID);
 		UserVo vo = userService.getUser(userID);
 		
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -52,7 +53,7 @@ public class UserController {
 		map.put("message", null); // 실패시 실패 메세지 
 		map.put("data", vo == null ); // vo가 없으면 사용가능한 이메일
 		
-		
+		System.out.println(vo == null);
 		return map;
 	}
 	
